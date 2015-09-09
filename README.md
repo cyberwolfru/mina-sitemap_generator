@@ -18,11 +18,12 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install mina-sitemap_generator
 
 ## Example deploy task
+    ...
+    require 'mina/sitemap_generator'
+    
+    ...
     desc "Deploys the current version to the server."
     task :deploy => :environment do
       deploy do
