@@ -1,6 +1,6 @@
 # Mina::SitemapGenerator
 
-This gem provides several mina tasks:
+This gem provides several mina tasks for [SitemapGenerator](https://github.com/kjvarga/sitemap_generator):
 
     mina sitemap:create           # Generate sitemaps but don't ping search engines.
     mina sitemap:refresh          # Generate sitemaps and ping search engines.
