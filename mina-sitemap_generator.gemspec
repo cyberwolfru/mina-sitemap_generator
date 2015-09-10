@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["webinsurgut@gmail.com"]
   spec.summary       = %q{SitemapGenerator tasks for Mina.}
   spec.description   = %q{SitemapGenerator tasks for Mina.}
-  spec.homepage      = "http://github.com/kattomg/mina-sitemap_generator"
+  spec.homepage      = "http://github.com/cyberwolfru/mina-sitemap_generator"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
