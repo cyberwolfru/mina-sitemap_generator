@@ -1,33 +1,28 @@
-require 'mina/rvm'
-
 namespace :sitemap do
-  # sitemap:create
   desc "Generate sitemaps but don't ping search engines."
   task :create => :environment do
-    queue %{
+    command %{
       echo "-----> Generate sitemaps but don't ping search engines."
-      cd "#{deploy_to}/#{current_path}"
-      #{echo_cmd %[#{rake} sitemap:refresh:no_ping]}
+      cd "#{fetch(:current_path)}"
+      #{echo_cmd %[#{fetch(:rake)} sitemap:refresh:no_ping]}
     }
   end
 
-  # sitemap:refresh
-  desc "Generate sitemaps and ping search engines."
+  desc 'Generate sitemaps and ping search engines.'
   task :refresh => :environment do
-    queue %{
+    command %{
       echo "-----> Generate sitemaps and ping search engines."
-      cd "#{deploy_to}/#{current_path}"
-      #{echo_cmd %[#{rake} sitemap:refresh]}
+      cd "#{fetch(:current_path)}"
+      #{echo_cmd %[#{fetch(:rake)} sitemap:refresh]}
     }
   end
 
-  # sitemap:clean
-  desc "Delete all Sitemap files in public/ directory"
+  desc 'Delete all Sitemap files in public/ directory'
   task :clean => :environment do
-    queue %{
+    command %{
       echo "-----> Delete all Sitemap files in public/ directory"
-      cd "#{deploy_to}/#{current_path}"
-      #{echo_cmd %[#{rake} sitemap:clean]}
+      cd "#{fetch(:current_path)}"
+      #{echo_cmd %[#{fetch(:rake)} sitemap:clean]}
     }
   end
 end
