@@ -17,10 +17,10 @@ namespace :sitemap do
     }
   end
 
-  desc 'Delete all Sitemap files in public/ directory'
+  desc 'Delete all sitemap files in public folder.'
   task :clean => :environment do
     command %{
-      echo "-----> Delete all Sitemap files in public/ directory"
+      echo "-----> Delete all sitemap files in public folder."
       cd "#{fetch(:current_path)}"
       #{echo_cmd %[#{fetch(:rake)} sitemap:clean]}
     }
